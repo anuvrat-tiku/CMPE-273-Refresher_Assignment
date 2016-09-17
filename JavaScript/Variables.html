@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="JavaScript" type = text/javascript>
+        var x = "I am a GLOBAL Variable!!"
+        function local_scope(){
+            var x = "I am a local variable!!"
+            alert(x);
+        }
+
+        function global_scope(){
+            alert(x);
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Variables_example</title>
+
+</head>
+<body>
+<h3> This program will demonstrate scope of variables in JavaScript.</h3>
+<h3>Local variables are defined inside a function's scope and cannot be accessed outside.</h3>
+<h3>Global variables can be accessed anywhere unless they are overridden by a local variable.</h3>
+    <script language = JavaScript type = text/javascript>
+        document.write("Value of x : "+ x);
+    </script>
+<br />
+<br />
+    <input type = "button" onclick = "local_scope()" value = "Local x" />
+    <input type = "button" onclick = "global_scope()" value =  "Global x" />
+</body>
+</html>

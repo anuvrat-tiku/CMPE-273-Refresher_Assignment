@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function strict_compute() {
+            "use strict";
+            var x = document.getElementById('s_operand1').value;
+            var y = document.getElementById('s_operand2').value;
+            if (document.getElementById('s_operator').value == "+") {
+                z = +x + +y;
+                document.getElementById("s_result").innerHTML = z;
+            } else if (document.getElementById('s_operator').value == "-") {
+                z = +x - +y;
+                document.getElementById("s_result").innerHTML = z;
+            } else if (document.getElementById('s_operator').value == "*") {
+                z = +x * +y;
+                document.getElementById("s_result").innerHTML = z;
+            } else if (document.getElementById('s_operator').value == "/") {
+                z = +x / +y;
+                document.getElementById("s_result").innerHTML = z;
+            } else {
+                alert("Incorrect operator entered. Only +,-,*,/ are allowed.");
+            }
+        }
+
+        function compute() {
+            //"use strict";
+            var x = document.getElementById('operand1').value;
+            var y = document.getElementById('operand2').value;
+            if (document.getElementById('operator').value == "+") {
+                z = +x + +y;
+                document.getElementById("result").innerHTML = z;
+            } else if (document.getElementById('operator').value == "-") {
+                z = +x - +y;
+                document.getElementById("result").innerHTML = z;
+            } else if (document.getElementById('operator').value == "*") {
+                z = +x * +y;
+                document.getElementById("result").innerHTML = z;
+            } else if (document.getElementById('operator').value == "/") {
+                z = +x / +y;
+                document.getElementById("result").innerHTML = z;
+            } else {
+                alert("Incorrect operator entered. Only +,-,*,/ are allowed.");
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Strict Mode example</title>
+</head>
+<body style="background-color: lightgrey">
+<div style="text-align: center;">
+    <h3>Demonstrate syntax errors in Strict mode using an example.</h3>
+    <h4>Calculator using input fields</h4>
+</div>
+<h4>Arithmetic with an undeclared variable in Strict mode : </h4>
+Number 1 : <input type = "text" id = "s_operand1" /> &nbsp;&nbsp;&nbsp;&nbsp;
+Number 2 : <input type = "text" id = "s_operand2" />  &nbsp;&nbsp;&nbsp;&nbsp;
+Operation : <input type = "text" id = "s_operator" />  &nbsp;&nbsp;&nbsp;&nbsp;
+<input type = "button" onclick = "strict_compute()" value = "Compute"/> &nbsp;&nbsp;&nbsp;&nbsp;
+<p id = "s_result">Result : </p>
+<br /><br /><hr />
+
+<h4>Normal arithmetic with undeclared variable : </h4>
+Number 1 : <input type = "text" id = "operand1" /> &nbsp;&nbsp;&nbsp;&nbsp;
+Number 2 : <input type = "text" id = "operand2" />  &nbsp;&nbsp;&nbsp;&nbsp;
+Operation : <input type = "text" id = "operator" />  &nbsp;&nbsp;&nbsp;&nbsp;
+<input type = "button" onclick = "compute()" value = "Compute"/> &nbsp;&nbsp;&nbsp;&nbsp;
+<p id = "result">Result : </p>
+<hr />
+
+</body>
+</html>

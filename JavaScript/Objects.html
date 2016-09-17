@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language = JavaScript type = text/javascript>
+        //Using an object constructor to create objects.
+        function animal(name, genus, species, family, order, animal_class, phylum, kingdom)  {
+            this.name = name;
+            this.genus = genus;
+            this.species = species;
+            this.family = family;
+            this.order = order;
+            this.animal_class = animal_class;
+            this.phylum = phylum;
+            this.kingdom = kingdom;
+
+        }
+
+        var Giraffe = new animal("Giraffe", "Giraffa", "G.camelopardalis", "Giraffidae", "Artiodactyla", "Mammalia", "Chordata", "Animalia");
+        var Tiger = new animal("Tiger", "Panthera", "P.tigris", "Felidae", "Carnivora", "Mammalia", "Chordata", "Animalia");
+        var Human = new animal("Human", "Homo", "H.sapien", "Hominidae", "Primates", "Mammalia", "Chordata", "Animalia");
+        var Grizzly = new animal("Grizzly Bear", "Ursus", "U.arctos ssp", "Ursidae", "Carnivora", "Mammalia", "Chordata", "Animalia");
+        var Dog = new animal("Dog", "Canis", "C.lupus", "Canidae", "Carnivora", "Mammalia", "Chordata", "Animalia");
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Object_example</title>
+</head>
+<body style="background-color:lightgrey;">
+<h1><center>Animal Kingdom Wiki</center></h1>
+<h3>This page is a wiki for the information about the taxonomy of the animal kingdom.</h3>
+<h3>You can view the genus, species, family, order, class, phylum, kingdom of any animal.</h3>
+
+<h4>Here are the animals in our Wiki</h4>
+
+<script language="JavaScript" type = text/javascript>
+    document.write("<b>GIRAFFE</b><br />");
+    for (var key in Giraffe) {
+        document.write(key+" : "+ Giraffe[key]+ " <br />");
+    }
+    document.write("<br /><b>TIGER</b><br />");
+    document.write("<br />");
+    for (var key in Tiger) {
+        document.write(key+" : "+ Tiger[key]+ " <br />");
+
+    }
+    document.write("<br /><b>HUMAN</b><br />");
+    document.write("<br />");
+    for (var key in Human) {
+        document.write(key+" : "+ Human[key]+ " <br />");
+    }
+    document.write("<br /><b>GRIZZLY</b><br />");
+    document.write("<br />");
+    for (var key in Grizzly) {
+        document.write(key+" : "+ Grizzly[key]+ " <br />");
+    }
+    document.write("<br/><b>DOG</b><br />");
+    document.write("<br />");
+    for (var key in Dog) {
+        document.write(key+" : "+ Dog[key]+ " <br />");
+    }
+
+    document.write("<br />");
+
+</script>
+
+</body>
+</html>

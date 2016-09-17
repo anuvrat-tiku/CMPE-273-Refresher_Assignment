@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="JavaScript" type="text/javascript">
+        function areaCircle(radius) {
+            alert("Area of Circle is : "+3.14*radius*radius);
+        }
+
+        function areaSquare(side) {
+            alert("Area of Square is : "+side*side);
+        }
+
+        function areaRectangle(length, breadth) {
+            alert("Area of Rectangle is : "+length*breadth);
+        }
+
+        function areaRightT(base, alt) {
+            alert("Area of Right Triangle is : "+0.5*base*alt);
+        }
+
+        function scaleneTriangle(side1, side2, side3) {
+            var s = (+side1 + +side2 + +side3)/3;
+            var a = (s - side1);
+            var b = (+s - +side2);
+            var c = (+s - +side3);
+            var temp = s * a * b * c;
+            var hero = Math.sqrt(temp);
+            alert("Area of Scalene Triangle is : "+hero);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Functions_example</title>
+</head>
+<body style="background-color: lightgray">
+<h1><center>Area of Geometrical Figures</center></h1>
+<h3><center>Use the input boxes to compute the area of geometrical figures.</center></h3>
+<br />
+
+<h4>1. Circle</h4>
+<p>Area of circle. Enter radius of the circle in the text box below and click on Compute Area!</p>
+<form name =  "Circle" method = "" onsubmit="areaCircle(document.getElementById('radius').value)">
+    Radius : <input type = "number"  id = "radius" />
+    <input type = "submit" value = "Compute Area"  />
+</form>
+<br /><hr>
+
+<h4>2. Square</h4>
+<p>Area of a square. Enter the side of the square and click on Compute Area!
+<form name  = "Square" method = "" onsubmit="areaSquare(document.getElementById('side').value)">
+    Side : <input type = "number"  id = "side" />
+    <input type = "submit" value = "Compute Area" />
+</form>
+<br /><hr />
+
+<h4>3. Rectangle</h4>
+<p>Enter the length and breadth of the rectangle and click on Compute Area!</p>
+<form name = "Rectangle" method="" onsubmit="areaRectangle(document.getElementById('length').value, document.getElementById('breadth').value)">
+    Length : <input type = "number"  id = "length" />
+    Breadth : <input type = "number" id = "breadth" />
+    <input type = "submit" value = "Compute Area" />
+</form>
+<br /><hr>
+
+<h4>4. Right Triangle</h4>
+<p>Enter the base and height for the triangle and click on Compute Area!</p>
+<form name = "Right Triangle" method="" onsubmit="areaRightT(document.getElementById('base').value, document.getElementById('alt').value)">
+    Base : <input type = "number"  id = "base" />
+    Altitude : <input type = "number" id = "alt">
+    <input type = "submit" value = "Compute Area" />
+</form>
+<br /><hr />
+
+<h4>5. Scalene Triangle</h4>
+<p>Enter all the three side of the scalene triangle and click on Compute Area!</p>
+<form name = "Right Triangle" method="" onsubmit="scaleneTriangle(document.getElementById('side1').value, document.getElementById('side2').value, document.getElementById('side3').value)">
+    Side1 : <input type = "number" id = "side1" />
+    Side2 : <input type = "number" id = "side2">
+    Side3 : <input type = "number" id = "side3">
+    <input type = "submit" value = "Compute Area" />
+</form>
+<br /><hr />
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function errChecker() {
+
+            var emsg = "";
+            var x = document.getElementById('err').value;
+            if (x >1 && x < 100) {
+                document.getElementById('p').innerHTML = emsg+"Correct value entered.";
+            }
+            try {
+                if (x == "")
+                    throw "No number entered";
+                if (isNaN(x))
+                    throw "Enter a valid number";
+
+                var x = Number(x);
+                if (x < 1)
+                    throw "too low";
+                if (x > 100)
+                    throw "too high";
+            }
+
+
+            catch (err) {
+                document.getElementById('p').innerHTML = "Error Caught : " + err;
+            }
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Errors_example</title>
+</head>
+<body style="background-color: lightgray">
+<center>
+    <h2>Error checker in JavaScript</h2>
+    <p>In the input box, enter an number only between 1 and 100:</p>
+
+    <input type="text" id="err" />
+    <button type="button" onclick="errChecker()" />Verify</button>
+    <p id="p"></p>
+
+</center>
+
+</body>
+</html>

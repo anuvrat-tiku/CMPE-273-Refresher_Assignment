@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html, body
+        {
+            background-color: lightgray;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function saveToLocalStorage() {
+            var car = {};
+            car.brand = document.getElementById('name').value;
+            car.model = document.getElementById('model').value;
+            car.isHybrid = document.getElementById('hybrid').value;
+            car.engine = document.getElementById('engine').value;
+            car.transmission = document.getElementById('transmission').value;
+            car.year = document.getElementById('year').value;
+            car.color = document.getElementById('color').value;
+
+            localStorage.setItem( 'car', JSON.stringify(car) );
+            console.log( JSON.parse( localStorage.getItem( 'car' ) ) );
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Local_storage</title>
+</head>
+<body>
+    <h2>Enter your car information here</h2>
+    <h3>This information will be stored in the local storage and never deleted.</h3>
+
+    Brand Name : <input type = "text" id = "name" /> <br />
+    Model : <input type = "text" id = "model" /> <br />
+    Hybrid : <input type = "text" id = "hybrid" /> <br />
+    Engine : <input type = "text" id = "engine" /> <br />
+    Transmission : <input type = "text" id = "transmission" /> <br />
+    Year : <input type = "text" id = "year" /> <br />
+    Color : <input type = "text" id = "color" /> <br /> <br />
+
+    <input type = "button" value = "Save" onclick = "saveToLocalStorage()" /> <br />
+</body>
+</html>

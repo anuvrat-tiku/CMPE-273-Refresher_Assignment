@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var vid = document.getElementById("myVideo");
+        vid.onplay = function() {
+            alert("The video has started to play");
+        };
+    </script>
+    <meta charset="UTF-8">
+    <title>Audio_Video Example</title>
+</head>
+<body style="background-color: lightgray">
+<center>
+    <h2>A/V in HTML5</h2>
+<h2>Video : </h2>
+<video controls>
+    <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+</video>
+<h2>Audio : </h2>
+	<audio controls>
+	<source src=https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg type=audio/ogg>
+	</audio>
+</center>
+</body>
+</html>

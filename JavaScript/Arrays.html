@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var x = 0;
+        var myarr = [];
+        var result = [];
+
+        function arrAppend() {
+            myarr[x] = document.getElementById('addNumber').value;
+            alert("Element : "+myarr[x]+" is added at index "+x);
+            x++;
+
+            document.getElementById('addNumber').value = "";
+        }
+
+        function display_arr() {
+
+            var txt = "";
+            for (var z = 0; z < myarr.length ; z++) {
+                txt += "Index "+ z + " : " + myarr[z] + "<br />";
+            }
+            document.getElementById("Array").innerHTML = txt;
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Arrays_example</title>
+</head>
+<body style = "background-color: lightgrey">
+<div style="text-align: center;">
+<h3><b><u>Arrays from user input</u></b></h3>
+</div>
+<h4>Enter the numbers you want to sort on by one. Enter a number in the text box and click on Append. This will add it to the array we will be sorting.
+<br />
+    To see the entire array you have entered, click on Display Array.
+</h4>
+<input type = "text"
+       id = "addNumber" />
+<input type = "button"
+       id = "addToArray"
+       value = "Append"
+       onclick = "arrAppend();" />
+<input type =  "button"
+       id = "show_arr"
+       value = "Display Array"
+       onclick="display_arr();" />
+<br /><hr />
+<p id = "Array"> Array : </p>
+<hr />
+</script>
+</body>
+</html>

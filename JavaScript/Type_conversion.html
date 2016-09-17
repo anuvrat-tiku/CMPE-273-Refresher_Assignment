@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function toBin() {
+            var x = document.getElementById('bin').value;
+            var y = (+x).toString(2);
+            var txt = "Value of "+ x + " in binary is : ";
+            document.getElementById('b').innerHTML = txt+y;
+
+        }
+
+        function toOct() {
+            var x = document.getElementById('oct').value;
+            var y = (+x).toString(8);
+            var txt = "Value of "+ x + " in octal is : ";
+            document.getElementById('o').innerHTML = txt+y;
+        }
+
+        function toHex() {
+            var x = document.getElementById('hex').value;
+            var y = (+x).toString(16);
+            var txt = "Value of "+ x + " in hexadecimal is : ";
+            document.getElementById('h').innerHTML = txt+y;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Type Conversion example</title>
+</head>
+<body style="background-color: lightgray">
+<div style="text-align: center;">
+    <h2>Bin/Hex/Oct converter</h2>
+    <h3>Enter any number you want in base 10 and convert it into Binary/Hexadecimal/Octal</h3><br /><hr />
+    <input type = "number" id = "bin" /> &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "button" value = "To Binary" onclick="toBin()" />
+    <br /><br />
+    <input type = "number" id = "oct" /> &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "button" value = "To Octal" onclick="toOct()" />
+    <br /><br />
+    <input type = "number" id = "hex" /> &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "button" value = "To Hex" onclick="toHex()" />
+    <br /><br /><hr />
+
+    <p id = "b"></p> <br />
+    <p id = "o"></p> <br />
+    <p id = "h"></p> <br />
+
+</div>
+</body>
+</html>

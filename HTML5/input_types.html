@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Types example</title>
+</head>
+<body style="background-color: lightblue">
+<div style="text-align: center; ">
+    <h3>Apply for a Citi Student Credit Card here</h3>
+    <h3>Get approval decision instantly</h3>
+    <br /><hr />
+    <h4>Complete and submit the form below.</h4>
+</div>
+
+<form id = "add_code" method = "POST" action = "http://localhost/input_types.php">
+    Name : <input type = "text" name = "name" required /> <br /> <br />
+    SSN : <input type = "password" name = "ssn" required /> <br /> <br />
+    Gender :<br /> Male <input type = "radio" name = "gender" value ="Male" checked />
+    Female <input type = "radio" name = "gender" value = "Female" /> <br /><br/>
+    Other Credit cards currently holding : <br /> 
+    Discover <input type = "checkbox" name = "card" /> <br />
+    AMEX <input type = "checkbox" name = "card" /> <br />
+    Capital One <input type = "checkbox" name = "card" /> <br />
+    BOFA <input type = "checkbox" name = "card" /> <br />
+    other  <input type = "checkbox" name = "card" /> <br />
+    <br />
+    Email : <input type = "email" name = "email"
+                        pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required /> <br /><br />
+    Phone : <input type = "number" name = "phone" /> <br /><br />
+
+    <input type = "submit" name = "submit" value = "Submit" />
+
+</form>
+
+<br /><br />
+<hr />
+
+</body>
+</html>

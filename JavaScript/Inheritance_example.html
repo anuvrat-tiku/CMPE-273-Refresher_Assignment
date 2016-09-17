@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var object = {
+            a : "Level 1",
+            b : {
+                c : "Level 2",
+                d : {
+                    e : "Level 3",
+                    f : {
+                      g : "Level 4",
+                      h : {
+                          i : "Level 5",
+                          j : function() {
+                              return this.a;
+                          },
+                      },
+                    },
+                },
+            },
+
+        };
+
+
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Inheritance Example</title>
+</head>
+<body style="background-color: lightgray">
+<div style="text-align: center;">
+    <h2>
+        Inheritance using Prototype nesting in JavaScript.
+    </h2>
+
+    <p id = "p"></p>
+</div>
+<script>
+    str = JSON.stringify(object);
+    str = JSON.stringify(object, null, 4);
+    document.write(str,  "<br>");
+
+    document.write(object.a, "<br>");
+    document.write(object.b, "<br>");
+    document.write(object.b.c, "<br>");
+    document.write(object.b.d, "<br>");
+    document.write(object.b.d.e, "<br>");
+    document.write(object.b.d.f, "<br>");
+    document.write(object.b.d.f.g, "<br>");
+    document.write(object.b.d.f.h, "<br>");
+    document.write(object.b.d.f.h.i, "<br>");
+    document.write(object.b.d.f.h.j, "<br>");
+</script>
+</body>
+</html>
